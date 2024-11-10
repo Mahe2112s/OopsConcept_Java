@@ -1,0 +1,37 @@
+In Java, multiple inheritance (where a class inherits from more than one superclass) is not supported.
+This is because it can lead to the "Diamond Problem," where ambiguity arises if multiple superclasses have methods with the same name.
+
+Instead, Java uses "interfaces" to provide a form of multiple inheritance.
+A class can implement multiple interfaces, allowing it to inherit behavior from multiple sources without the risks of the diamond problem, as interfaces only provide method signatures (no implementation), eliminating method conflict.
+
+Explanation:
+-----------
+In Java, multiple inheritance is the ability for a class to inherit from more than one superclass.
+This feature is commonly found in languages like C++. However, Java explicitly disallows multiple inheritance of classes to avoid complexity and ambiguity, mainly because of a problem called the Diamond Problem.
+
+Understanding the "Diamond Problem":
+----------------------------------
+Consider the following scenario in a language that allows multiple inheritance:
+
+Class A:                A base class with a method "display()".
+
+Class B and Class C:    Both inherit from Class A and each override the display() method.
+
+Class D:                Inherits from both Class B and Class C.
+
+
+If Class D calls the display() method, the language faces ambiguity: Should it inherit display() from Class B or Class C?
+
+* This situation is known as the Diamond Problem because of the inheritance structure's shape:
+
+      A
+     / \
+    B   C
+     \ /
+      D
+
+This ambiguity can lead to errors, making the code complex and difficult to debug.
+
+How Java Avoids the Diamond Problem:-
+------------------------------------
+To prevent this ambiguity, Java disallows multiple inheritance of classes. Each class can only extend one superclass, which forms a single inheritance path. Java’s solution is interfaces.
