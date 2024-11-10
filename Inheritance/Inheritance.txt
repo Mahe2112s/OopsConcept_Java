@@ -1,0 +1,57 @@
+1.Inheritance is a process of extracting some of the properties from an existing class and adding additional features by creating a new class.
+2.Existing class: Known as the Superclass, Base class, or Parent class.
+3.New class: Known as the Derived class, Subclass, or Child class.
+4.Inheritance introduces the concept of reusability, allowing us to use existing properties repeatedly without modifying them.
+5.Inheritance uses "extends" keyword to inherit from one class to another.
+
+1.Single Inheritance:-
+--------------------
+A single subclass inherits from one superclass.
+
+   Superclass
+       |
+   Subclass
+
+
+2. Multiple Inheritance:-(Java explicitly disallows multiple inheritance)
+-----------------------
+A subclass inherits from two or more superclasses.
+
+   Superclass1    Superclass2
+         \         /
+          \       /
+           Subclass
+
+
+
+3. Multilevel Inheritance:-
+-------------------------
+Inheritance that occurs over multiple levels.
+
+   Superclass
+       |
+   IntermediateClass
+       |
+   Subclass
+
+
+4.Hierarchical Inheritance:-
+--------------------------
+One superclass has multiple subclasses.
+
+       Superclass
+         /    \
+        /      \
+  Subclass1   Subclass2
+
+
+5. Hybrid Inheritance:-
+----------------------
+A combination of multiple and hierarchical inheritance.
+
+       Superclass
+       /         \
+      /           \
+Subclass1      IntermediateClass
+                     |
+                Subclass2
